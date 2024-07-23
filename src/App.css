@@ -1,38 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: gold;
+}
 .App {
+  background-color: #14161a;
+  color: white;
+  min-height: 100vh;
+}
+/* App.css */
+.banner {
+  background-image: url('../public/banner-bg.jpg');
+}
+
+.bannerContent {
+  /* height: 400px; */
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  justify-content: space-around;
+}
+
+.tagline {
+  display: flex;
+  height: 40%;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.carousel {
+  height: 50%;
+  display: flex;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* App.css */
+.row {
+  background-color: #16171a;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.row:hover {
+  background-color: #131111;
+}
+
+.row .MuiTableCell-root {
+  font-family: Montserrat;
+}
+
+.pagination .MuiPaginationItem-root {
+  color: gold;
+}
+/* Carousel.css */
+
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+}
+.container-coin {
+  width: 75%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 25px;
+  padding: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width: 960px) {
+  .container-coin {
+    width: 100%;
+    margin-top: 0;
+    padding: 20px;
+    padding-top: 0;
+  }
+}
+/* app.css */
+.selectbutton {
+  border: 1px solid gold;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-family: Montserrat, sans-serif;
+  cursor: pointer;
+  width: 22%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.selectbutton.selected {
+  background-color: gold;
+  color: black;
+  font-weight: 700;
+}
+
+.selectbutton:hover {
+  background-color: gold;
+  color: black;
 }
